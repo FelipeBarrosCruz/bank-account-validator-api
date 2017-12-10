@@ -1,0 +1,9 @@
+manifests
+node_modules
+.gitignore
+.eslintrc
+Dockerfile
+Jenkinsfile
+README.md
+*.sublime-*
+test%

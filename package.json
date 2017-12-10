@@ -1,0 +1,52 @@
+{
+  "name": "bank-account-validator-api",
+  "version": "1.0.0",
+  "description": "Bank Account Validator Api",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node",
+    "start": "nodemon --exec npm run babel-node ./index.js",
+    "test": "NODE_ENV=testing mocha --compilers js:babel-core/register test --timeout 60000 --reporter spec"
+  },
+  "author": "FelipeBarrosCruz<felipe.barros.pt@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^5.1.0",
+    "dotenv": "^4.0.0",
+    "hapi": "^16.1.1",
+    "hapi-router": "^3.5.0",
+    "hapi-swagger": "^7.7.0",
+    "inert": "^4.2.0",
+    "joi": "^10.5.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.10.3",
+    "slug": "^0.9.1",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.11.0",
+    "qs": "^6.4.0"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
+  }
+}
