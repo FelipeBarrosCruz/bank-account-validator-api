@@ -1,3 +1,5 @@
+import BankAccountValidator from 'bank-account-validator-js'
+
 const BankListNameWithCodes = [{
   code: '001',
   name: 'BANCO DO BRASIL S.A'
@@ -30,4 +32,15 @@ const BankListNameWithCodes = [{
 
 export const SelectHandler = (request, reply) => {
   return reply(BankListNameWithCodes).code(200)
+}
+
+
+export const PostHandler = (request, reply) => {
+  const payload = request.payload
+  BankAccountValidator.Moip.BankAccount.validate(payload)
+    .then(() => {
+      return reply({ ok: true }).code(200)
+    }).catch((err) => {
+      return reply(Object.assign({ ok: false}, err)).code(400)
+    })
 }
