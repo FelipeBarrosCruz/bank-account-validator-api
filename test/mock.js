@@ -26,3 +26,25 @@ export const BankListNameWithCodes = [{
   code: '041',
   name: 'BANCO DO ESTADO DO RIO GRANDE DO SUL S.A'
 }]
+
+
+export const ValidBankAccount = {
+  bankNumber: "001",
+  agencyNumber: "1584",
+  agencyCheckNumber: "9",
+  accountNumber: "00210169",
+  accountCheckNumber: "6",
+}
+
+export const InvalidBankAccount = {
+  bankNumber: "001",
+  agencyNumber: "1584",
+  agencyCheckNumber: "9",
+  accountNumber: "00210169",
+  accountCheckNumber: "0",
+}
+
+export const accountCheckNumberError = {
+    "description": "Dígito da conta não corresponde ao número da conta/agência preenchido",
+    "code": "ACCOUNT_CHECK_NUMBER_DONT_MATCH"
+}
