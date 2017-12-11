@@ -6,7 +6,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "start": "nodemon --exec npm run babel-node ./index.js",
-    "test": "NODE_ENV=testing mocha --compilers js:babel-core/register test --timeout 60000 --reporter spec"
+    "test": "NODE_ENV=testing mocha --require babel-core/register test --timeout 60000 --reporter spec"
   },
   "author": "FelipeBarrosCruz<felipe.barros.pt@gmail.com>",
   "license": "ISC",
@@ -21,7 +21,8 @@
     "lodash": "^4.17.4",
     "mongoose": "^4.10.3",
     "slug": "^0.9.1",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "bank-account-validator-js": "git+https://github.com/FelipeBarrosCruz/bank-account-validator-js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
